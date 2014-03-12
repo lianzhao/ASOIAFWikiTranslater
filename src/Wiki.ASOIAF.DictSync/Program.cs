@@ -37,6 +37,7 @@
                         }
 
                         list.Add(new KeyValuePair<string, string>(result.Info.title, lang.value));
+                        Log.Debug(string.Format("Entry :{0}#{1}", result.Info.title, lang.value));
                     }
                     catch (Exception ex)
                     {
@@ -46,6 +47,7 @@
 
                 using (var sw = new StreamWriter(@"C:\Users\lianzhao\Documents\GitHub\ASOIAFWikiTranslater\dict\词条.txt"))
                 {
+                    sw.WriteLine("#WARNING: THIS FILE IS AUTO GENERATED. PLEASE DO NOT MODIFY.");
                     foreach (var kvp in list)
                     {
                         sw.WriteLine("{0}#{1}", kvp.Key, kvp.Value);
