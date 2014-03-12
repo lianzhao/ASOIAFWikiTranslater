@@ -23,7 +23,7 @@
                 var results =
                     allPagesources.Select(
                         p => PageResult.Create(p.info, p.langlinks().Where(l => l.lang == "en").ToEnumerable()))
-                        .ToEnumerable().Take(3);
+                        .ToEnumerable();
                 var list = new List<KeyValuePair<string, string>>();
                 foreach (var result in results)
                 {
