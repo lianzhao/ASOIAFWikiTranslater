@@ -24,20 +24,21 @@
                     allPagesources.Select(
                         p => PageResult.Create(p.info, p.langlinks().Where(l => l.lang == "en").ToEnumerable()))
                         .ToEnumerable();
-                var list = new List<KeyValuePair<string, string>>();
+                var list = new List<string>();
                 foreach (var result in results)
                 {
                     try
                     {
                         var lang = result.Data.FirstOrDefault();
-                        if (lang == null)
+                        if (lang == null || string.IsNullOrEmpty(lang.value))
                         {
                             Log.Warn(string.Format("Noen {0}", result.Info.title));
                             continue;
                         }
 
-                        list.Add(new KeyValuePair<string, string>(result.Info.title, lang.value));
-                        Log.Debug(string.Format("Entry :{0}#{1}", result.Info.title, lang.value));
+                        var entry = string.Format("{0}#{1}", lang.value, result.Info.title);
+                        list.Add(entry);
+                        Log.Debug(string.Format("Entry :{0}", entry));
                     }
                     catch (Exception ex)
                     {
@@ -48,9 +49,9 @@
                 using (var sw = new StreamWriter(@"C:\Users\lianzhao\Documents\GitHub\ASOIAFWikiTranslater\dict\词条.txt"))
                 {
                     sw.WriteLine("#WARNING: THIS FILE IS AUTO GENERATED. PLEASE DO NOT MODIFY.");
-                    foreach (var kvp in list)
+                    foreach (var entry in list)
                     {
-                        sw.WriteLine("{0}#{1}", kvp.Key, kvp.Value);
+                        sw.WriteLine(entry);
                     }
                 }
             }
