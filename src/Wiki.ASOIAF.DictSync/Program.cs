@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Globalization;
     using System.IO;
     using System.Linq;
 
@@ -46,9 +47,10 @@
                     }
                 }
 
-                using (var sw = new StreamWriter(@"C:\Users\lianzhao\Documents\GitHub\ASOIAFWikiTranslater\dict\词条.txt"))
+                using (var sw = new StreamWriter(@"..\..\..\..\dict\词条.txt"))
                 {
                     sw.WriteLine("#WARNING: THIS FILE IS AUTO GENERATED. PLEASE DO NOT MODIFY.");
+                    sw.WriteLine("#GENERATED DATE: " + DateTime.UtcNow.ToString(CultureInfo.InvariantCulture));
                     foreach (var entry in list)
                     {
                         sw.WriteLine(entry);
