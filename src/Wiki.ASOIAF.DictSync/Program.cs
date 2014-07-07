@@ -37,9 +37,8 @@
                             continue;
                         }
 
-                        var entry = string.Format("{0}#{1}", lang.value, result.Info.title);
-                        list.Add(entry);
-                        Log.Debug(string.Format("Entry :{0}", entry));
+                        var entries = GetEntries(lang.value, result.Info.title);
+                        list.AddRange(entries);
                     }
                     catch (Exception ex)
                     {
@@ -60,6 +59,29 @@
             catch (Exception ex)
             {
                 Log.Fatal("Error occurred", ex);
+            }
+        }
+
+        private static IEnumerable<string> GetEntries(string en, string ch)
+        {
+            return
+                EntryFormats.Select(
+                    format =>
+                        {
+                            var entry = string.Format("{0}#{1}", string.Format(format, en), string.Format(format, ch));
+                            Log.Debug(string.Format("Entry :{0}", entry));
+                            return entry;
+                        });
+        }
+
+        private static IEnumerable<string> EntryFormats
+        {
+            get
+            {
+                yield return "[[{0}]]";
+                yield return " {0} ";
+                yield return " {0}.";
+                yield return " {0},";
             }
         }
     }
