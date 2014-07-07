@@ -14,10 +14,17 @@
     {
         private static readonly ILog Log = LogManager.GetCurrentClassLogger();
 
+        private static readonly IDictionary<string, string> EntryFormats = new Dictionary<string, string>();
+
         static void Main(string[] args)
         {
             try
             {
+                EntryFormats.Add("[[{0}]]", "[[{0}]]");
+                EntryFormats.Add(" {0} ", " {0} ");
+                EntryFormats.Add(" {0}.", " {0}。");
+                EntryFormats.Add(" {0},", " {0}，");
+
                 var wiki = new Wiki("Wiki.ASOIAF.DictSync", "zh.asoiaf.wikia.com", "/api.php");
                 var allPagesources =
                     wiki.Query.allpages().Where(p => p.filterredir == allpagesfilterredir.nonredirects).Pages;
@@ -64,25 +71,13 @@
 
         private static IEnumerable<string> GetEntries(string en, string ch)
         {
-            return
-                EntryFormats.Select(
-                    format =>
-                        {
-                            var entry = string.Format("{0}#{1}", string.Format(format, en), string.Format(format, ch));
-                            Log.Debug(string.Format("Entry :{0}", entry));
-                            return entry;
-                        });
-        }
-
-        private static IEnumerable<string> EntryFormats
-        {
-            get
-            {
-                yield return "[[{0}]]";
-                yield return " {0} ";
-                yield return " {0}.";
-                yield return " {0},";
-            }
+            return EntryFormats.Select(
+                kvp =>
+                    {
+                        var entry = string.Format("{0}#{1}", string.Format(kvp.Key, en), string.Format(kvp.Value, ch));
+                        Log.Debug(string.Format("Entry :{0}", entry));
+                        return entry;
+                    });
         }
     }
 }
