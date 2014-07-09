@@ -5,6 +5,7 @@
     using System.Globalization;
     using System.IO;
     using System.Linq;
+    using System.Text.RegularExpressions;
 
     using Common.Logging;
 
@@ -35,6 +36,15 @@
                                 {
                                     Log.Warn(string.Format("Noen {0}", item.Result.Info.title));
                                     return false;
+                                }
+
+                                if (!Regex.IsMatch(item.Lang.value.Substring(0, 1), "^[a-zA-Z]*$"))
+                                {
+                                    Log.Warn(
+                                        string.Format(
+                                            "Not en, title:{0}, lang:{1}",
+                                            item.Result.Info.title,
+                                            item.Lang.value));
                                 }
 
                                 return true;
