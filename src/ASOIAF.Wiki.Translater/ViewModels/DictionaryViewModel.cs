@@ -8,6 +8,8 @@
 
     using Common.Logging;
 
+    using Newtonsoft.Json;
+
     public class DictionaryViewModel : ViewModelBase, IEnumerable<KeyValuePair<string, string>>
     {
         private const char Separator = '#';
@@ -17,7 +19,7 @@
         private static readonly ILog Log = LogManager.GetCurrentClassLogger();
 
         // allows duplicate key
-        protected List<KeyValuePair<string, string>> Dictionary { get; private set; }
+        protected IDictionary<string, string> Dictionary { get; private set; }
 
         #region Inpcs
         #region Name
@@ -61,33 +63,8 @@
             var fi = new FileInfo(path);
             this.Name = fi.Name.Substring(0, fi.Name.Length - fi.Extension.Length);
             this.IsEnabled = true;
-            var fileContent = File.ReadAllLines(path);
-            this.Dictionary = new List<KeyValuePair<string, string>>();
-            foreach (var line in fileContent)
-            {
-                if (string.IsNullOrWhiteSpace(line))
-                {
-                    // ignore blank line
-                    continue;
-                }
-
-                if (line.StartsWith(CommentCharacter))
-                {
-                    // ignore comment line
-                    Log.Debug(string.Format("Ignore comment line :{0}", line));
-                    continue;
-                }
-
-                var parts = line.Split(Separator);
-                if (parts.Length != 2)
-                {
-                    // ignore invalid dictionary entry
-                    Log.Warn(string.Format("Invalid dictionary entry:{0}", line));
-                    continue;
-                }
-
-                this.Dictionary.Add(new KeyValuePair<string, string>(parts[0], parts[1]));
-            }
+            var fileContent = File.ReadAllText(path);
+            this.Dictionary = JsonConvert.DeserializeObject<IDictionary<string, string>>(fileContent);
         }
 
         #region Implement IEnumerable<KeyValuePair<string, string>>
