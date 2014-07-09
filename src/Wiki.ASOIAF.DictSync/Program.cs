@@ -10,21 +10,16 @@
 
     using LinqToWiki.Generated;
 
+    using Newtonsoft.Json;
+
     class Program
     {
         private static readonly ILog Log = LogManager.GetCurrentClassLogger();
-
-        private static readonly IDictionary<string, string> EntryFormats = new Dictionary<string, string>();
 
         static void Main(string[] args)
         {
             try
             {
-                EntryFormats.Add("[[{0}]]", "[[{0}]]");
-                EntryFormats.Add(" {0} ", " {0} ");
-                EntryFormats.Add(" {0}.", " {0}。");
-                EntryFormats.Add(" {0},", " {0}，");
-
                 var wiki = new Wiki("Wiki.ASOIAF.DictSync", "zh.asoiaf.wikia.com", "/api.php");
                 var allPagesources =
                     wiki.Query.allpages().Where(p => p.filterredir == allpagesfilterredir.nonredirects).Pages;
@@ -32,52 +27,44 @@
                     allPagesources.Select(
                         p => PageResult.Create(p.info, p.langlinks().Where(l => l.lang == "en").ToEnumerable()))
                         .ToEnumerable();
-                var list = new List<string>();
-                foreach (var result in results)
-                {
-                    try
-                    {
-                        var lang = result.Data.FirstOrDefault();
-                        if (lang == null || string.IsNullOrEmpty(lang.value))
-                        {
-                            Log.Warn(string.Format("Noen {0}", result.Info.title));
-                            continue;
-                        }
+                var dict = results.Select(result => new { Lang = result.Data.FirstOrDefault(), Result = result })
+                    .Where(
+                        item =>
+                            {
+                                if (item.Lang == null || string.IsNullOrEmpty(item.Lang.value))
+                                {
+                                    Log.Warn(string.Format("Noen {0}", item.Result.Info.title));
+                                    return false;
+                                }
 
-                        var entries = GetEntries(lang.value, result.Info.title);
-                        list.AddRange(entries);
-                    }
-                    catch (Exception ex)
-                    {
-                        Log.Error("Error occurred", ex);
-                    }
-                }
+                                return true;
+                            })
+                    .GroupBy(item => item.Lang.value)
+                    .Select(
+                        group =>
+                            {
+                                if (group.Count() > 1)
+                                {
+                                    Log.Warn(
+                                        string.Format(
+                                            "Duplicated item, en:{0}, ch:{1}",
+                                            group.Key,
+                                            string.Join(",", group.Select(item => item.Result.Info.title))));
+                                }
 
-                using (var sw = new StreamWriter(@"..\..\..\..\dict\词条.txt"))
+                                return group.First();
+                            })
+                    .ToDictionary(item => item.Lang.value, item => item.Result.Info.title);
+                var json = JsonConvert.SerializeObject(dict);
+                using (var sw = new StreamWriter(@"..\..\..\..\dict\entry.json"))
                 {
-                    sw.WriteLine("#WARNING: THIS FILE IS AUTO GENERATED. PLEASE DO NOT MODIFY.");
-                    sw.WriteLine("#GENERATED DATE: " + DateTime.UtcNow.ToString(CultureInfo.InvariantCulture));
-                    foreach (var entry in list)
-                    {
-                        sw.WriteLine(entry);
-                    }
+                    sw.Write(json);
                 }
             }
             catch (Exception ex)
             {
                 Log.Fatal("Error occurred", ex);
             }
-        }
-
-        private static IEnumerable<string> GetEntries(string en, string ch)
-        {
-            return EntryFormats.Select(
-                kvp =>
-                    {
-                        var entry = string.Format("{0}#{1}", string.Format(kvp.Key, en), string.Format(kvp.Value, ch));
-                        Log.Debug(string.Format("Entry :{0}", entry));
-                        return entry;
-                    });
         }
     }
 }
