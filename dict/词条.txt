@@ -1,5 +1,5 @@
 #WARNING: THIS FILE IS AUTO GENERATED. PLEASE DO NOT MODIFY.
-#GENERATED DATE: 07/07/2014 05:09:54
+#GENERATED DATE: 07/09/2014 03:19:26
 [[Aegon Frey (Jinglebell)]]#[[(铃铛响)伊耿·佛雷]]
  Aegon Frey (Jinglebell) # (铃铛响)伊耿·佛雷 
  Aegon Frey (Jinglebell).# (铃铛响)伊耿·佛雷。
@@ -1352,6 +1352,10 @@
  Jyana # 健娜 
  Jyana.# 健娜。
  Jyana,# 健娜，
+[[Sheepstealer]]#[[偷羊贼]]
+ Sheepstealer # 偷羊贼 
+ Sheepstealer.# 偷羊贼。
+ Sheepstealer,# 偷羊贼，
 [[Battle of Winterfell]]#[[偷袭临冬城]]
  Battle of Winterfell # 偷袭临冬城 
  Battle of Winterfell.# 偷袭临冬城。
@@ -4108,6 +4112,10 @@
  Swan ship # 天鹅船 
  Swan ship.# 天鹅船。
  Swan ship,# 天鹅船，
+[[Sunfyre]]#[[太阳火]]
+ Sunfyre # 太阳火 
+ Sunfyre.# 太阳火。
+ Sunfyre,# 太阳火，
 [[Lady's Shame]]#[[夫人之耻号]]
  Lady's Shame # 夫人之耻号 
  Lady's Shame.# 夫人之耻号。
@@ -4288,6 +4296,10 @@
  Oberyn Martell # 奥柏伦·马泰尔 
  Oberyn Martell.# 奥柏伦·马泰尔。
  Oberyn Martell,# 奥柏伦·马泰尔，
+[[Omber]]#[[奥柏半岛]]
+ Omber # 奥柏半岛 
+ Omber.# 奥柏半岛。
+ Omber,# 奥柏半岛，
 [[Othor]]#[[奥瑟]]
  Othor # 奥瑟 
  Othor.# 奥瑟。
@@ -5364,6 +5376,10 @@
  Sybelle Locke # 希贝娜·洛克 
  Sybelle Locke.# 希贝娜·洛克。
  Sybelle Locke,# 希贝娜·洛克，
+[[House of Pahl]]#[[帕尔家族]]
+ House of Pahl # 帕尔家族 
+ House of Pahl.# 帕尔家族。
+ House of Pahl,# 帕尔家族，
 [[Paezhar zo Myraq]]#[[帕扎哈·佐·密拉克]]
  Paezhar zo Myraq # 帕扎哈·佐·密拉克 
  Paezhar zo Myraq.# 帕扎哈·佐·密拉克。
@@ -6388,6 +6404,10 @@
  House Stonehouse # 斯通浩斯家族 
  House Stonehouse.# 斯通浩斯家族。
  House Stonehouse,# 斯通浩斯家族，
+[[Shrykos]]#[[斯里科斯]]
+ Shrykos # 斯里科斯 
+ Shrykos.# 斯里科斯。
+ Shrykos,# 斯里科斯，
 [[New Ghis]]#[[新吉斯]]
  New Ghis # 新吉斯 
  New Ghis.# 新吉斯。
@@ -6600,6 +6620,10 @@
  Donnel of Duskendale # 暮谷城的唐纳 
  Donnel of Duskendale.# 暮谷城的唐纳。
  Donnel of Duskendale,# 暮谷城的唐纳，
+[[Stormcloud]]#[[暴风]]
+ Stormcloud # 暴风 
+ Stormcloud.# 暴风。
+ Stormcloud,# 暴风，
 [[Storm Dancer]]#[[暴风舞者号]]
  Storm Dancer # 暴风舞者号 
  Storm Dancer.# 暴风舞者号。
@@ -6688,6 +6712,10 @@
  Moon Boy # 月童 
  Moon Boy.# 月童。
  Moon Boy,# 月童，
+[[Moondancer]]#[[月舞]]
+ Moondancer # 月舞 
+ Moondancer.# 月舞。
+ Moondancer,# 月舞，
 [[Moonbloom]]#[[月花]]
  Moonbloom # 月花 
  Moonbloom.# 月花。
@@ -7220,6 +7248,10 @@
  Sandor Clegane # 桑铎·克里冈 
  Sandor Clegane.# 桑铎·克里冈。
  Sandor Clegane,# 桑铎·克里冈，
+[[Meleys]]#[[梅丽亚斯]]
+ Meleys # 梅丽亚斯 
+ Meleys.# 梅丽亚斯。
+ Meleys,# 梅丽亚斯，
 [[Melisandre]]#[[梅丽珊卓]]
  Melisandre # 梅丽珊卓 
  Melisandre.# 梅丽珊卓。
@@ -7380,6 +7412,10 @@
  Bridge of Dream # 梦想桥 
  Bridge of Dream.# 梦想桥。
  Bridge of Dream,# 梦想桥，
+[[Dreamfyre]]#[[梦火]]
+ Dreamfyre # 梦火 
+ Dreamfyre.# 梦火。
+ Dreamfyre,# 梦火，
 [[Children of the Forest]]#[[森林之子]]
  Children of the Forest # 森林之子 
  Children of the Forest.# 森林之子。
@@ -7580,6 +7616,10 @@
  Walgrave # 沃格雷夫 
  Walgrave.# 沃格雷夫。
  Walgrave,# 沃格雷夫，
+[[Vermithor]]#[[沃米索尔]]
+ Vermithor # 沃米索尔 
+ Vermithor.# 沃米索尔。
+ Vermithor,# 沃米索尔，
 [[Walton]]#[[沃顿]]
  Walton # 沃顿 
  Walton.# 沃顿。
@@ -7600,6 +7640,10 @@
  House Volmark # 沃马克家族 
  House Volmark.# 沃马克家族。
  House Volmark,# 沃马克家族，
+[[Vermax]]#[[沃马克斯]]
+ Vermax # 沃马克斯 
+ Vermax.# 沃马克斯。
+ Vermax,# 沃马克斯，
 [[Sand Road]]#[[沙之路]]
  Sand Road # 沙之路 
  Sand Road.# 沙之路。
@@ -7892,6 +7936,10 @@
  Tytos Blackwood # 泰陀斯·布莱伍德 
  Tytos Blackwood.# 泰陀斯·布莱伍德。
  Tytos Blackwood,# 泰陀斯·布莱伍德，
+[[Tryaxes]]#[[泰雷克休]]
+ Tryaxes # 泰雷克休 
+ Tryaxes.# 泰雷克休。
+ Tryaxes,# 泰雷克休，
 [[Zei]]#[[泽]]
  Zei # 泽 
  Zei.# 泽。
@@ -8116,6 +8164,10 @@
  wraith # 海灵号 
  wraith.# 海灵号。
  wraith,# 海灵号，
+[[Seasmoke]]#[[海烟]]
+ Seasmoke # 海烟 
+ Seasmoke.# 海烟。
+ Seasmoke,# 海烟，
 [[Sealord of Braavos]]#[[海王]]
  Sealord of Braavos # 海王 
  Sealord of Braavos.# 海王。
@@ -8340,6 +8392,10 @@
  Grey Cliffs # 灰崖 
  Grey Cliffs.# 灰崖。
  Grey Cliffs,# 灰崖，
+[[Grey Ghost]]#[[灰影]]
+ Grey Ghost # 灰影 
+ Grey Ghost.# 灰影。
+ Grey Ghost,# 灰影，
 [[Ghaston Grey]]#[[灰怖堡]]
  Ghaston Grey # 灰怖堡 
  Ghaston Grey.# 灰怖堡。
@@ -8536,6 +8592,10 @@
  Tyene Sand # 特蕾妮·沙德 
  Tyene Sand.# 特蕾妮·沙德。
  Tyene Sand,# 特蕾妮·沙德，
+[[Tessarion]]#[[特赛里恩]]
+ Tessarion # 特赛里恩 
+ Tessarion.# 特赛里恩。
+ Tessarion,# 特赛里恩，
 [[Tristifer Botley]]#[[特里斯蒂芬·波特利]]
  Tristifer Botley # 特里斯蒂芬·波特利 
  Tristifer Botley.# 特里斯蒂芬·波特利。
@@ -11332,6 +11392,10 @@
  Mollander # 莫兰德 
  Mollander.# 莫兰德。
  Mollander,# 莫兰德，
+[[Morghul]]#[[莫古尔]]
+ Morghul # 莫古尔 
+ Morghul.# 莫古尔。
+ Morghul,# 莫古尔，
 [[Mors Umber]]#[[莫尔斯·安柏]]
  Mors Umber # 莫尔斯·安柏 
  Mors Umber.# 莫尔斯·安柏。
@@ -11552,6 +11616,10 @@
  Lymond Vikary # 莱蒙·维卡瑞 
  Lymond Vikary.# 莱蒙·维卡瑞。
  Lymond Vikary,# 莱蒙·维卡瑞，
+[[Lymond Lychester]]#[[莱蒙·莱彻斯特]]
+ Lymond Lychester # 莱蒙·莱彻斯特 
+ Lymond Lychester.# 莱蒙·莱彻斯特。
+ Lymond Lychester,# 莱蒙·莱彻斯特，
 [[House Lydden]]#[[莱顿家族]]
  House Lydden # 莱顿家族 
  House Lydden.# 莱顿家族。
@@ -12320,6 +12388,10 @@
  Balerion (cat) # 贝勒里恩(猫) 
  Balerion (cat).# 贝勒里恩(猫)。
  Balerion (cat),# 贝勒里恩(猫)，
+[[Baela Targaryen]]#[[贝妮拉·坦格利安]]
+ Baela Targaryen # 贝妮拉·坦格利安 
+ Baela Targaryen.# 贝妮拉·坦格利安。
+ Baela Targaryen,# 贝妮拉·坦格利安，
 [[Bellena Hawick]]#[[贝娜娜·哈维克]]
  Bellena Hawick # 贝娜娜·哈维克 
  Bellena Hawick.# 贝娜娜·哈维克。
@@ -12392,6 +12464,10 @@
  Currency # 货币 
  Currency.# 货币。
  Currency,# 货币，
+[[Cannibal]]#[[贪食者]]
+ Cannibal # 贪食者 
+ Cannibal.# 贪食者。
+ Cannibal,# 贪食者，
 [[Milady's Supper]]#[[贵妇的晚餐]]
  Milady's Supper # 贵妇的晚餐 
  Milady's Supper.# 贵妇的晚餐。
@@ -13188,6 +13264,10 @@
  Artos Stark # 阿托斯·史塔克 
  Artos Stark.# 阿托斯·史塔克。
  Artos Stark,# 阿托斯·史塔克，
+[[Arrax]]#[[阿拉克斯]]
+ Arrax # 阿拉克斯 
+ Arrax.# 阿拉克斯。
+ Arrax,# 阿拉克斯，
 [[Aladore Florent]]#[[阿拉德·佛罗伦]]
  Aladore Florent # 阿拉德·佛罗伦 
  Aladore Florent.# 阿拉德·佛罗伦。
@@ -13420,6 +13500,22 @@
  Rhaenys's hill # 雷妮丝丘陵 
  Rhaenys's hill.# 雷妮丝丘陵。
  Rhaenys's hill,# 雷妮丝丘陵，
+[[Rhaena Targaryen]]#[[雷妮亚·坦格利安]]
+ Rhaena Targaryen # 雷妮亚·坦格利安 
+ Rhaena Targaryen.# 雷妮亚·坦格利安。
+ Rhaena Targaryen,# 雷妮亚·坦格利安，
+[[Rhaena Targaryen (daughter of Aenys I)]]#[[雷妮亚·坦格利安(伊尼斯一世之女)]]
+ Rhaena Targaryen (daughter of Aenys I) # 雷妮亚·坦格利安(伊尼斯一世之女) 
+ Rhaena Targaryen (daughter of Aenys I).# 雷妮亚·坦格利安(伊尼斯一世之女)。
+ Rhaena Targaryen (daughter of Aenys I),# 雷妮亚·坦格利安(伊尼斯一世之女)，
+[[Rhaena Targaryen (Rhaena of Pentos)]]#[[雷妮亚·坦格利安(戴蒙之女)]]
+ Rhaena Targaryen (Rhaena of Pentos) # 雷妮亚·坦格利安(戴蒙之女) 
+ Rhaena Targaryen (Rhaena of Pentos).# 雷妮亚·坦格利安(戴蒙之女)。
+ Rhaena Targaryen (Rhaena of Pentos),# 雷妮亚·坦格利安(戴蒙之女)，
+[[Rhaena Targaryen (disambiguation)]]#[[雷妮亚·坦格利安(消歧义)]]
+ Rhaena Targaryen (disambiguation) # 雷妮亚·坦格利安(消歧义) 
+ Rhaena Targaryen (disambiguation).# 雷妮亚·坦格利安(消歧义)。
+ Rhaena Targaryen (disambiguation),# 雷妮亚·坦格利安(消歧义)，
 [[Rhaenyra Targaryen]]#[[雷妮拉·坦格利安]]
  Rhaenyra Targaryen # 雷妮拉·坦格利安 
  Rhaenyra Targaryen.# 雷妮拉·坦格利安。
@@ -13432,22 +13528,6 @@
  Rhea Royce # 雷娅·罗伊斯 
  Rhea Royce.# 雷娅·罗伊斯。
  Rhea Royce,# 雷娅·罗伊斯，
-[[Rhaena]]#[[雷娜·坦格利安]]
- Rhaena # 雷娜·坦格利安 
- Rhaena.# 雷娜·坦格利安。
- Rhaena,# 雷娜·坦格利安，
-[[Rhaena Targaryen (daughter of Aenys I)]]#[[雷娜·坦格利安(伊尼斯一世之女)]]
- Rhaena Targaryen (daughter of Aenys I) # 雷娜·坦格利安(伊尼斯一世之女) 
- Rhaena Targaryen (daughter of Aenys I).# 雷娜·坦格利安(伊尼斯一世之女)。
- Rhaena Targaryen (daughter of Aenys I),# 雷娜·坦格利安(伊尼斯一世之女)，
-[[Rhaena Targaryen (Rhaena of Pentos)]]#[[雷娜·坦格利安(戴蒙之女)]]
- Rhaena Targaryen (Rhaena of Pentos) # 雷娜·坦格利安(戴蒙之女) 
- Rhaena Targaryen (Rhaena of Pentos).# 雷娜·坦格利安(戴蒙之女)。
- Rhaena Targaryen (Rhaena of Pentos),# 雷娜·坦格利安(戴蒙之女)，
-[[Rhaena Targaryen (disambiguation)]]#[[雷娜·坦格利安(消歧义)]]
- Rhaena Targaryen (disambiguation) # 雷娜·坦格利安(消歧义) 
- Rhaena Targaryen (disambiguation).# 雷娜·坦格利安(消歧义)。
- Rhaena Targaryen (disambiguation),# 雷娜·坦格利安(消歧义)，
 [[House Redfort]]#[[雷德佛家族]]
  House Redfort # 雷德佛家族 
  House Redfort.# 雷德佛家族。
@@ -14128,10 +14208,6 @@
  Qarth # 魁尔斯 
  Qarth.# 魁尔斯。
  Qarth,# 魁尔斯，
-[[Straits of Qarth]]#[[魁尔斯海峡]]
- Straits of Qarth # 魁尔斯海峡 
- Straits of Qarth.# 魁尔斯海峡。
- Straits of Qarth,# 魁尔斯海峡，
 [[Qavo Nogarys]]#[[魁沃·诺加斯]]
  Qavo Nogarys # 魁沃·诺加斯 
  Qavo Nogarys.# 魁沃·诺加斯。
@@ -14420,6 +14496,10 @@
  Roone # 鲁尼 
  Roone.# 鲁尼。
  Roone,# 鲁尼，
+[[Roone (Maester)]]#[[鲁尼(学士)]]
+ Roone (Maester) # 鲁尼(学士) 
+ Roone (Maester).# 鲁尼(学士)。
+ Roone (Maester),# 鲁尼(学士)，
 [[Rus]]#[[鲁斯]]
  Rus # 鲁斯 
  Rus.# 鲁斯。
