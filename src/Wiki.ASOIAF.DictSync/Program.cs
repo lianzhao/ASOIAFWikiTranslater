@@ -22,6 +22,14 @@
             {
                 var dict = GetDict();
                 PersistentDict(dict, @"..\..\..\..\dict\entry.json");
+                var redirects = GetRedirects();
+                var dict2 =
+                    redirects.Select(
+                        kvp =>
+                        kvp.Value != null && dict.ContainsKey(kvp.Value)
+                            ? new { Title = kvp.Key, Lang = dict[kvp.Value] }
+                            : null).Where(item => item != null).ToDictionary(item => item.Title, item => item.Lang);
+                PersistentDict(dict2, @"..\..\..\..\dict\redirects.json");
             }
             catch (Exception ex)
             {
@@ -31,7 +39,7 @@
 
         private static IDictionary<string, string> GetDict()
         {
-            var wiki = new Wiki("Wiki.ASOIAF.DictSync", "zh.asoiaf.wikia.com", "/api.php");
+            var wiki = GetWiki("zh.asoiaf.wikia.com");
             var allPagesources =
                 wiki.Query.allpages().Where(p => p.filterredir == allpagesfilterredir.nonredirects).Pages;
             var results =
@@ -76,6 +84,29 @@
                     })
                 .ToDictionary(item => item.Lang.value, item => item.Result.Info.title);
             return dict;
+        }
+
+        private static IDictionary<string, string> GetRedirects()
+        {
+            var wiki = GetWiki("awoiaf.westeros.org");
+            var sources =
+                wiki.Query.allpages()
+                .Where(p => p.filterredir == allpagesfilterredir.redirects)
+                    .Pages.Select(p => PageResult.Create(p.info, p.links().ToEnumerable()))
+                    .ToList();
+            var redirects = sources.ToDictionary(
+                item => item.Info.title,
+                item =>
+                {
+                    var link = item.Data.FirstOrDefault();
+                    return link == null ? (string)null : link.title;
+                });
+            return redirects;
+        }
+
+        private static Wiki GetWiki(string baseUri)
+        {
+            return new Wiki("Wiki.ASOIAF.DictSync", baseUri, "/api.php");
         }
 
         private static void PersistentDict(IDictionary<string, string> dict, string path)
