@@ -47,7 +47,6 @@
     <Compile Include="Article\Original_Dimensions.cs" />
     <Compile Include="Article\Revision.cs" />
     <Compile Include="Article\Section.cs" />
-    <Compile Include="Article\WikiaApiArticleService.cs" />
     <Compile Include="Auth\IAuthenticationService.cs" />
     <Compile Include="Map\Boundaries.cs" />
     <Compile Include="Map\I18n.cs" />

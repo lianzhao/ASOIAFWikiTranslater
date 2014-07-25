@@ -1,5 +1,6 @@
 ﻿namespace Wiki.Api.Wikia.Article
 {
+    using System.Collections.Generic;
     using System.Globalization;
     using System.Linq;
     using System.Net.Http;
@@ -33,16 +34,21 @@
 
         public async Task<Article> GetArticleAsync(string articleTitle, int abstractLength)
         {
-            var uri = string.Format("{0}/Details?titles={1}", BaseUri, articleTitle);
+            var articles = await this.GetArticlesAsync(abstractLength, articleTitle);
+            return articles.FirstOrDefault();
+        }
+
+        public async Task<IEnumerable<Article>> GetArticlesAsync(int abstractLength, params string[] articleTitles)
+        {
+            var uri = string.Format("{0}/Details?titles={1}", BaseUri, string.Join(",", articleTitles));
             if (abstractLength >= 0)
             {
                 uri = string.Format("{0}&abstract={1}", uri, abstractLength.ToString(CultureInfo.InvariantCulture));
             }
-
             var response = await this.client.GetAsync(uri);
             var json = await response.Content.ReadAsStringAsync();
             var root = JsonConvert.DeserializeObject<ArticleDetails>(json);
-            return root.items.Values.FirstOrDefault();
+            return root.items.Values;
         }
     }
 }
