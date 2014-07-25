@@ -6,7 +6,7 @@
 
     using Wiki.Api.Auth;
 
-    class FormAuthenticationService : WebServiceBase, IAuthenticationService
+    public class FormAuthenticationService : WebServiceBase, IAuthenticationService
     {
         private readonly string loginUri;
 
