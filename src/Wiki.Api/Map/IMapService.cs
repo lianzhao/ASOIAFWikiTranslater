@@ -6,5 +6,7 @@
     public interface IMapService
     {
         Task<IEnumerable<Point>> GetPointsAsync(int mapId);
+
+        Task PostPointAsync(Point point);
     }
 }
