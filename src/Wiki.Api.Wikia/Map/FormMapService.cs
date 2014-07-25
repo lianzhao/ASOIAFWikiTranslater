@@ -34,6 +34,11 @@
             var json = tmp.Substring(0, tmp.Length - 1);
             var map = JsonConvert.DeserializeObject<Api.Map.Map>(json);
 
+            foreach (var point in map.points)
+            {
+                // attach map id manually
+                point.map_id = mapId;
+            }
             return map.points;
         }
 
