@@ -14,6 +14,8 @@
     {
         private const string BaseUri = "http://zh.asoiaf.wikia.com/api/v1/Articles";
 
+        private const int MaxQueryArticleTitles = 10;
+
         public ApiArticleService()
         {
         }
@@ -40,6 +42,20 @@
 
         public async Task<IEnumerable<Article>> GetArticlesAsync(int abstractLength, params string[] articleTitles)
         {
+            if (articleTitles.Length > MaxQueryArticleTitles)
+            {
+                var groups =
+                    articleTitles.Select((title, i) => new { Title = title, Index = i })
+                        .GroupBy(x => x.Index / MaxQueryArticleTitles, x => x.Title);
+                var rv = Enumerable.Empty<Article>();
+                foreach (var @group in groups)
+                {
+                    rv = rv.Concat(await this.GetArticlesAsync(abstractLength, group.ToArray()));
+                }
+
+                return rv;
+            }
+
             var uri = string.Format("{0}/Details?titles={1}", BaseUri, string.Join(",", articleTitles));
             if (abstractLength >= 0)
             {
